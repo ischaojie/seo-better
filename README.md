@@ -105,6 +105,29 @@ google 站长指南
   # 或者把链接放在 JavaScript 中
   javascript:window.location.href='/products'
   ```
+### 标题
+
+- 网页标题应该唯一且准确，避免重复。
+
+    bad:
+    ```
+    <title>无标题(新增网页1)</title>
+    ```
+    good:
+    ```
+    <title>Brandon's Baseball Cards</title>
+    ```
+
+- 使用 `description` 描述网页信息。描述应该准确，不重复。
+
+    bad:
+    ```
+    <meta name="description" content="这是一个网页">
+    ```
+    good:
+    ```
+    <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
+    ```
 
 ### 图片
 
