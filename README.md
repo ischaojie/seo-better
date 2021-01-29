@@ -4,6 +4,30 @@
 
 [google 站长指南](https://developers.google.com/search/docs)
 
+### 站点地图
+使用站点地图让搜索引擎主动发现网站内容。
+- 保证网址一致
+- 站点地图中包含网址的会话 ID
+- 使用 UTF-8 编码
+- 对特定字符使用转义符（引号、大于、小于、&）
+
+提交站点题图：
+1. 将站点地图地址写入 `robot.txt` 文件。
+```
+Sitemap: http://example.com/sitemap_location.xml
+```
+2. 使用 `ping` 发送 get 请求进行提交。
+```
+http://www.google.com/ping?sitemap=<complete_url_of_sitemap>
+```
+#### 视频站点地图
+可以为网站上的视频单独创建站点地图。注意视频 `xmlns`标记的使用。
+示例：[sitemap-video.xml](sitemap-video.xml)
+> [更多说明](https://developers.google.com/search/docs/advanced/sitemaps/video-sitemaps)
+
+#### 图片站点地图
+> [更多说明](https://developers.google.com/search/docs/advanced/sitemaps/image-sitemaps)
+
 ### 网址
 
 - 保持网址结构简单，容易阅读。
@@ -17,7 +41,7 @@
   bad:
 
   ```
-  http://www.example.com/hotel？id_sezione=360&id=3a5ebc944f41daa6f849f
+  http://www.example.com/hotel?id_sezione=360&id=3a5ebc944f41daa6f849f
   ```
 
 - 在网址中使用连字符，不要用下划线。
@@ -35,6 +59,7 @@
   ```
 
 - 尽可能避免在网址中使用会话 ID，而应考虑使用 Cookie。
+
   good：
   ```
   https://www.example.com/user/shiniao
@@ -196,4 +221,4 @@
 ### 富文本文件
 - 不要在网页上使用 `iframe` 标记，搜索引擎不会检索到。
 
-### 站点地图
+
