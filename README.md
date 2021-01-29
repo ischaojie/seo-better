@@ -1,7 +1,8 @@
 # SEO-Better
 
 参考：
-google 站长指南
+
+[google 站长指南](https://developers.google.com/search/docs)
 
 ### 网址
 
@@ -105,29 +106,36 @@ google 站长指南
   # 或者把链接放在 JavaScript 中
   javascript:window.location.href='/products'
   ```
+
 ### 标题
 
 - 网页标题应该唯一且准确，避免重复。
 
-    bad:
-    ```
-    <title>无标题(新增网页1)</title>
-    ```
-    good:
-    ```
-    <title>Brandon's Baseball Cards</title>
-    ```
+  bad:
+
+  ```
+  <title>无标题(新增网页1)</title>
+  ```
+
+  good:
+
+  ```
+  <title>Brandon's Baseball Cards</title>
+  ```
 
 - 使用 `description` 描述网页信息。描述应该准确，不重复。
 
-    bad:
-    ```
-    <meta name="description" content="这是一个网页">
-    ```
-    good:
-    ```
-    <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
-    ```
+  bad:
+
+  ```
+  <meta name="description" content="这是一个网页">
+  ```
+
+  good:
+
+  ```
+  <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
+  ```
 
 ### 图片
 
@@ -144,6 +152,7 @@ google 站长指南
   ```
 
   good:
+
   ```
   <img src="puppy.jpg"/>
   ```
@@ -156,11 +165,35 @@ google 站长指南
 
 - 不要使用 css 展示图片
 
-    bad:
-    ```
-    <div style="background-image:url(puppy.jpg)">A golden retriever puppy</div>
-    ```
-    good:
-    ```
-    <img src="puppy.jpg" alt="A golden retriever puppy" />
-    ```
+  bad:
+
+  ```
+  <div style="background-image:url(puppy.jpg)">A golden retriever puppy</div>
+  ```
+
+  good:
+
+  ```
+  <img src="puppy.jpg" alt="A golden retriever puppy" />
+  ```
+
+- 为不同屏幕适配图片
+
+  good:
+  ```html
+  <img
+    srcset="example-320w.jpg 320w, 
+    example-480w.jpg 480w, 
+    example-800w.jpg 800w"
+    sizes="(max-width: 320px) 280px,
+    (max-width: 480px) 440px,
+    800px"
+    src="example-800w.jpg"
+    alt="responsive web!"
+  />
+  ```
+
+### 富文本文件
+- 不要在网页上使用 `iframe` 标记，搜索引擎不会检索到。
+
+### 站点地图
